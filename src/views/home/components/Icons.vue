@@ -82,23 +82,23 @@ export default {
         iconImgUrl: 'https://picbed.qunarzz.com/c65b3bb7571a6bd62df669213e44b84d.png',
         imgName: '一日游'
       }, {
-        id: '016',
+        id: '017',
         iconImgUrl: 'https://picbed.qunarzz.com/f6bb08a239ce1b038204120a8d1e4669.png',
         imgName: '特惠酒店'
       }, {
-        id: '016',
+        id: '018',
         iconImgUrl: 'https://picbed.qunarzz.com/3a08f360e958ccb2b947049387873ace.png',
         imgName: '借钱'
       }, {
-        id: '016',
+        id: '019',
         iconImgUrl: 'https://picbed.qunarzz.com/19b4f6d2fabd617789fa5aad65b249da.png',
         imgName: '白金卡'
       }, {
-        id: '016',
+        id: '020',
         iconImgUrl: 'https://img1.qunarzz.com/order/comp/2007/23/734c3c62d2adce02.png',
         imgName: '行程设计'
       }, {
-        id: '016',
+        id: '021',
         iconImgUrl: 'https://picbed.qunarzz.com/25e3b9f17a21a6e0113c57a23ffccde4.png',
         imgName: '周边短途'
       }]
