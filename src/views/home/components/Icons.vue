@@ -134,7 +134,7 @@ export default {
             .icon-img
                 width: 80%
                 height: auto
-                margin-top: 5px
+                margin-top: 6px
             .icon-text
                 height: 25px
                 line-height: 25px
