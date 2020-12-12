@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     handleclick () {
-      alert('未完成')
+      alert(' 未完成 ')
     }
   }
 }
