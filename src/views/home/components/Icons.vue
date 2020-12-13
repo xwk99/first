@@ -126,17 +126,17 @@ export default {
         height 180px
         .icon
             overflow: hidden
-            float: left
             width: 20%
-            height:50%
+            height 50%
             text-align: center
-            position: relative
+            float: left
             .icon-img
                 width: 80%
-                height: auto
+                height: 60%
                 margin-top: 6px
             .icon-text
-                height: 25px
-                line-height: 25px
+                height: 20%
+                line-height: auto
                 font-size: 12px
+                padding-top: 4px
 </style>
