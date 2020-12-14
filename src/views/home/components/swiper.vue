@@ -60,7 +60,8 @@ export default {
           width: 104px
           position: absolute
           bottom: 40px
-          left: 130px
+          left: 50%
+          margin-left: -52px
           text-align: center
           background: #00000099
           .img-content

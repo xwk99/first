@@ -4,12 +4,14 @@
           <span class="iconfont">&#xe624;</span>
       </div>
       <div class="header-center">
-           <span class="iconfont back-icon">&#xe632;</span>
+           <span class="iconfont find-icon">&#xe632;</span>
            输入城市/景点/游玩主题</div>
-      <div class="header-right">
-          城市
-          <span class="iconfont arrow-icon">&#xe64a;</span>
-      </div>
+      <router-link to="/city">
+            <div class="header-right">
+                城市
+            <span class="iconfont arrow-icon">&#xe64a;</span>
+            </div>
+      </router-link>
   </div>
 </template>
 
@@ -32,7 +34,7 @@ export default {
             width: .54rem
             padding-left: 0.1rem
             float: left
-            .back-icon
+            .find-icon
                 text-align: center
                 font-size: .4rem
         .header-center
@@ -48,6 +50,7 @@ export default {
             width: 1.24rem
             float: right
             text-align: center
+            color: white
             .arrow-icon
                 margin-left: -.04rem
                 font-size: .2rem
