@@ -25,8 +25,8 @@ export default {
       swiperOptions: {
         pagination: '.swiper-pagination',
         loop: true,
-        speed: 3000,
-        autoplay: true
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
       }
     }
   },
