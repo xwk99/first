@@ -1,0 +1,12 @@
+{
+    "res": true,
+    "data": {
+        "citylist": [{
+            "cityFirstName": "A",
+            "cityName": ["阿坝藏族羌族自治州","阿克苏地区","阿拉尔"]
+        }, {
+            "cityFirstName": "B",
+            "cityName": ["巴彦淖尔","巴音郭楞","巴中"]
+        }]
+    }
+}
