@@ -7,7 +7,7 @@
         <router-view/>
       </div>
       <div class="recommend-content">
-          <div class="recommend-content-block" v-for="item of recommendlist" :key="item.id">
+          <div class="recommend-content-block" v-for="item of list" :key="item.id">
             <ul>
               <li>
                 <img class="recommend-content-img" :src="item.imgUrl"/>
@@ -24,34 +24,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendlist: [{
-        id: '001',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1805/ad/ad507355a167f587a3.img.jpg_256x160_dbb6cb75.jpg',
-        imgTitle: '重庆长江索道',
-        imgContent: '万里长江的一条空中走廊，俯瞰滚滚长江',
-        price: '¥30'
-      }, {
-        id: '002',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1911/84/8493e4b6e0787877a3.img.jpg_256x160_27a611e7.jpg',
-        imgTitle: '重庆两江夜游',
-        imgContent: '不览夜景，未到重庆',
-        price: '¥70'
-      }, {
-        id: '003',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1507/8d/8d1817185ad3f395.img.jpg_256x160_df668e50.jpg',
-        imgTitle: '武隆天生三桥风景区',
-        imgContent: '变形金刚大战黄金甲',
-        price: '¥91'
-      }, {
-        id: '004',
-        imgUrl: 'https://img1.qunarzz.com/sight/p0/1910/a7/a7863ded4e64b6faa3.img.jpg_256x160_3717c847.jpg',
-        imgTitle: '洪崖洞',
-        imgContent: '老重庆的真实写照，极具巴渝传统特色',
-        price: '¥8'
-      }]
-    }
+  props: {
+    list: Array
   },
   methods: {
     handleclick () {
