@@ -21,12 +21,16 @@ export default {
     height: .86rem
     background: $bgcolor
     line-height: .86rem
-    overflow: hidden
     text-align: center
     color: white
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
   .back-header
-    position: absolute
-    top: 13px
-    left: 5px
+    position: fixed
+    top: .26rem
+    left: .1rem
     color white
+    z-index: 2
 </style>

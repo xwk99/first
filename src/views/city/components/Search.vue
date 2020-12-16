@@ -16,8 +16,13 @@ export default {
 @import '../../../assets/styles/variable.styl'
     .search
         height: .90rem
+        line-height: .9rem
         background: $bgcolor
         text-align: center
+        position: fixed
+        top: 0.88rem
+        left: 0
+        right: 0
         .search-input
             width: 90%
             height: .65rem
