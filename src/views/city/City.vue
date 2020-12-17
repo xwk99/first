@@ -2,8 +2,8 @@
    <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :citylist="citylist"></city-list>
-    <city-alphabet></city-alphabet>
+    <city-list :cities="cities" :letterindex="letterindex"></city-list>
+    <city-alphabet @change="handlechange"></city-alphabet>
    </div>
 </template>
 
@@ -23,7 +23,8 @@ export default {
   },
   data () {
     return {
-      citylist: []
+      cities: {},
+      letterindex: ''
     }
   },
   methods: {
@@ -32,8 +33,11 @@ export default {
         .then(this.getCityInfoSucc)
     },
     getCityInfoSucc (res) {
-      console.log(res.data.data.citylist)
-      this.citylist = res.data.data.citylist
+      console.log(res.data.data.cities)
+      this.cities = res.data.data.cities
+    },
+    handlechange (letter) {
+      this.letterindex = letter
     }
   },
   mounted () {

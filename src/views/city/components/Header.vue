@@ -27,10 +27,11 @@ export default {
     top: 0
     right: 0
     left: 0
+    z-index: 2
   .back-header
     position: fixed
     top: .26rem
     left: .1rem
     color white
-    z-index: 2
+    z-index: 9
 </style>

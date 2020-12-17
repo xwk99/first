@@ -23,6 +23,7 @@ export default {
         top: 0.88rem
         left: 0
         right: 0
+        z-index: 9
         .search-input
             width: 90%
             height: .65rem

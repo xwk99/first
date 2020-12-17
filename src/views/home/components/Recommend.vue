@@ -3,7 +3,7 @@
       <div class="recommend-title">特惠门票</div>
       <div class="recommend-title-select">
         <router-link to='' class="change-recommend" @click.native="handleclick">当季景点门票</router-link>
-        <router-link to='' class="change-recommend" @click.native="handleclick">特惠门票</router-link>
+        <router-link to='' class="change-recommend" @click.native="handleclick" :class="changeclass">特惠门票</router-link>
         <router-view/>
       </div>
       <div class="recommend-content">
@@ -27,9 +27,14 @@ export default {
   props: {
     list: Array
   },
+  data () {
+    return {
+      changeclass: []
+    }
+  },
   methods: {
     handleclick () {
-      alert(' 未完成 ')
+      console.log(this.$el)
     }
   }
 }
@@ -84,4 +89,6 @@ export default {
         height: 19px
         font-size: 18px
         color: orange
+  .bgcolor
+    background-color: blue
 </style>
