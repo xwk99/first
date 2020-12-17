@@ -16,11 +16,11 @@
         <ul>
           <li class="first-name" v-for="(item, index) of firstLetter" :key="index">{{item}}</li>
         </ul>
-          <div v-for="(item, key) of cities" :key="key" :ref="key">
-            <div class="list-title">{{key}}</div>
-            <div class="list-city" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
-          </div>
-          <div class="clearfloat"></div>
+        <div v-for="(item, key) of cities" :key="key" :ref="key">
+          <div class="list-title">{{key}}</div>
+          <div class="list-city" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
+        </div>
+        <div class="clearfloat"></div>
       </div>
     </div>
 </template>
@@ -69,36 +69,36 @@ export default {
     .clearfloat
       height: 0
       clear: both
-  .list
-    margin-top: 1.79rem
-    overflow: hidden
-  .list-title
-    border-bottom: solid #eaeaea
-    background: #eaeaea
-    height: 0.2rem
-    line-height: 0.2rem
-    overflow: hidden
-    width: 100%
-    padding: .25rem .3rem
-    font-size: 12px
-  .cities-list
-    height: 0.9rem
-    width: 2.74rem
-    float: left
-  .list-city
-    height: 0.9rem
-    width: 2.74rem
-    float: left
-    line-height: .9rem
-    text-align: center
-    border-bottom: .002rem solid #eaeaea
-    border-right: 0.02rem solid #eaeaea
-  .first-name
-    height: 0.9rem
-    width: 1.63rem
-    float: left
-    line-height: .9rem
-    text-align: center
-    border-bottom: .002rem solid #eaeaea
-    border-right: 0.02rem solid #eaeaea
+    .list
+      margin-top: 1.79rem
+      overflow: hidden
+    .list-title
+      border-bottom: solid #eaeaea
+      background: #eaeaea
+      height: 0.2rem
+      line-height: 0.2rem
+      overflow: hidden
+      width: 100%
+      padding: .25rem .3rem
+      font-size: 12px
+    .cities-list
+      height: 0.9rem
+      width: 2.74rem
+      float: left
+    .list-city
+      height: 0.9rem
+      width: 2.74rem
+      float: left
+      line-height: .9rem
+      text-align: center
+      border-bottom: .002rem solid #eaeaea
+      border-right: 0.02rem solid #eaeaea
+    .first-name
+      height: 0.9rem
+      width: 1.63rem
+      float: left
+      line-height: .9rem
+      text-align: center
+      border-bottom: .002rem solid #eaeaea
+      border-right: 0.02rem solid #eaeaea
 </style>
