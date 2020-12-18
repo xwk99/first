@@ -3,7 +3,7 @@
         <div class="search">
             <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音"/>
         </div>
-        <div class="search-content" ref="search">
+        <div class="search-content" ref="search" v-show="show">
             <ul>
                 <li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
             </ul>
@@ -20,14 +20,18 @@ export default {
   data () {
     return {
       keyword: '',
-      list: []
+      list: [],
+      show: false
     }
   },
   watch: {
     keyword () {
       if (!this.keyword) {
         this.list = []
+        this.show = false
         return
+      } else {
+        this.show = true
       }
       const result = []
       for (const i in this.cities) {

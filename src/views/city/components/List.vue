@@ -5,11 +5,11 @@
           <h1>热门城市</h1>
         </div>
         <ul>
-          <li class="list-city">北京</li>
-          <li class="list-city">上海</li>
-          <li class="list-city">三亚</li>
-          <li class="list-city">丽江</li>
-          <li class="list-city">杭州</li>
+          <li class="list-city" @click="handlecityclick">北京</li>
+          <li class="list-city" @click="handlecityclick">上海</li>
+          <li class="list-city" @click="handlecityclick">三亚</li>
+          <li class="list-city" @click="handlecityclick">丽江</li>
+          <li class="list-city" @click="handlecityclick">杭州</li>
           <li class="list-city"></li>
         </ul>
         <div class="list-title">字母排序</div>
@@ -32,6 +32,14 @@ export default {
   props: {
     cities: Object,
     letterindex: String
+  },
+  methods: {
+    handlecityclick (c) {
+      this.$store.dispatch('changcity', c.target.innerText)
+      // this.$store.dispatch('changcity', c.target.innerText) 跳过action直接改变
+      this.$router.push('/')
+      alert(c.target.innerText)
+    }
   },
   computed: {
     firstLetter () {
