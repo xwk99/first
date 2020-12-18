@@ -12,7 +12,7 @@
               <li>
                 <img class="recommend-content-img" :src="item.imgUrl"/>
               </li>
-              <li class="recommend-content-title ">{{item.imgTitle}}</li>
+              <router-link tag="li" :to="'/detail/'+item.id" class="recommend-content-title ">{{item.imgTitle}}</router-link>
               <li class="recommend-content-text recomemnd-content-option">{{item.imgContent}}</li>
               <li class="recommend-content-price recomemnd-content-option">{{item.price}}</li>
             </ul>
