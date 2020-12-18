@@ -24,6 +24,7 @@ export default {
   },
   data () {
     return {
+      lastcity: '',
       swiperlist: [],
       iconlist: [],
       recommendlist: []
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/index.json')
+      axios.get('/index.json?city=' + this.$store.state.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
@@ -42,7 +43,15 @@ export default {
     }
   },
   mounted () {
+    this.lastcity = this.$store.state.city
     this.getHomeInfo()
+  },
+  activated () {
+    console.log(0)
+    if (this.lastcity !== this.$store.state.city) {
+      this.lastcity = this.$store.state.city
+      this.getHomeInfo()
+    }
   }
 }
 </script>
