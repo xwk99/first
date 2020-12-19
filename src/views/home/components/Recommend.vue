@@ -2,21 +2,20 @@
     <div>
       <div class="recommend-title">特惠门票</div>
       <div class="recommend-title-select">
-        <router-link to='' class="change-recommend" @click.native="handleclick">当季景点门票</router-link>
-        <router-link to='' class="change-recommend" @click.native="handleclick" :class="changeclass">特惠门票</router-link>
-        <router-view/>
+        <div class="change-recommend" @click="handleclick1" :style="changestyle1">当季景点门票</div>
+        <div class="change-recommend" @click="handleclick2" :style="changestyle2">特惠门票</div>
       </div>
       <div class="recommend-content">
-          <div class="recommend-content-block" v-for="item of list" :key="item.id">
+          <router-link class="recommend-content-block" v-for="item of handlelist[page]" :key="item.id" tag="div" :to="'/detail/'+item.id">
             <ul>
               <li>
                 <img class="recommend-content-img" :src="item.imgUrl"/>
               </li>
-              <router-link tag="li" :to="'/detail/'+item.id" class="recommend-content-title ">{{item.imgTitle}}</router-link>
+              <li class="recommend-content-title ">{{item.imgTitle}}</li>
               <li class="recommend-content-text recomemnd-content-option">{{item.imgContent}}</li>
               <li class="recommend-content-price recomemnd-content-option">{{item.price}}</li>
             </ul>
-          </div>
+          </router-link>
       </div>
     </div>
 </template>
@@ -29,12 +28,38 @@ export default {
   },
   data () {
     return {
-      changeclass: []
+      changestyle1: {
+        background: '#17c0c8'
+      },
+      changestyle2: {
+        background: ''
+      },
+      page: 0
     }
   },
   methods: {
-    handleclick () {
-      console.log(this.$el)
+    handleclick1 () {
+      this.changestyle1.background = '#17c0c8'
+      this.changestyle2.background = ''
+      this.page = 0
+    },
+    handleclick2 () {
+      this.changestyle1.background = ''
+      this.changestyle2.background = '#17c0c8'
+      this.page = 1
+    }
+  },
+  computed: {
+    handlelist () {
+      const handlelist = []
+      this.list.forEach((item, index) => {
+        var page = Math.floor(index / 4)
+        if (!handlelist[page]) {
+          handlelist[page] = []
+        }
+        handlelist[page].push(item)
+      })
+      return handlelist
     }
   }
 }
@@ -49,12 +74,13 @@ export default {
     font-size: 18px
     font-weight: bold
   .recommend-title-select
+    display: flex
     height: 42px
     width: 100%
     line-height: 42px
     margin-bottom: 6px
     .change-recommend
-      padding: 12px 10px
+      padding: 0 10px
       margin : 0 0 0 15px
       border: #8080805c solid thin
       border-radius: 5px

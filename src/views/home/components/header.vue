@@ -6,7 +6,7 @@
       <div class="header-center">
            <span class="iconfont find-icon">&#xe632;</span>
            <input type="text" class="find-input"  placeholder="输入城市/景点/游玩主题" />
-           </div>
+      </div>
       <router-link to="/city">
             <div class="header-right">
                 {{this.$store.state.city}}
