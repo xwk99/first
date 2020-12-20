@@ -2,7 +2,7 @@
     <div class="container" @click="handlegallaryclick">
         <div class="wrapper">
             <swiper ref="mySwiper" :options="swiperOptions">
-                <swiper-slide v-for="(item, index) of imglist" :key="index">
+                <swiper-slide v-for="(item, index) of img" :key="index">
                     <img class="swiper-img" :src="item" />
                 </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -15,7 +15,8 @@
 export default {
   name: 'commonGallary',
   props: {
-    gallaryshow: Boolean
+    gallaryshow: Boolean,
+    img: Array
   },
   data () {
     return {
@@ -24,8 +25,7 @@ export default {
         paginationType: 'fraction',
         observer: true,
         observeParents: true
-      },
-      imglist: ['http://img1.qunarzz.com/sight/p0/1603/4e/4e7a704010c95d2490.water.jpg_350x240_28f4063c.jpg', 'http://img1.qunarzz.com/sight/p0/201306/26/04ce17682ab714e2c8d65eac.jpg_350x240_ec496d78.jpg']
+      }
     }
   },
   methods: {
@@ -45,6 +45,7 @@ export default {
         right: 0
         top: 0
         bottom: 0
+        z-index: 9
         display: flex
         background: black
         justify-content: center
